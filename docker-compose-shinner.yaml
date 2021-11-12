@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+
+  spark-submit:
+    container_name: SDL_spark-submit-shinner
+    image: spark-submit:2.4.6
+    hostname: spark-submit
+    ports:
+      - "6080:6080"
+    depends_on:
+      - spark-master
+    environment:
+      - "SPARK_LOCAL_IP=spark-submit"
+    volumes:
+       - ./data/shinner/demo_graphs:/DemoGraphs
+       - ./data/shinner/config:/Config
+
