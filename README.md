@@ -27,8 +27,6 @@ digraph finite_state_machine {
     spark_submit -> spark_shinner;
 
     jsatch -> spark_shinner_1;
-
-
 }
 ```
 
@@ -55,6 +53,3 @@ Hence, to deploy the full stack, run:
 ```docker-compose -f docker-compose.yaml -f docker-compose-scinem.yaml - f docker-compose-shinner.yaml up -d``` 
 
 Or simply remove whatever service is not relevant.
-
-
-
