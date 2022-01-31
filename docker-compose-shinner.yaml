@@ -13,6 +13,5 @@ services:
     environment:
       - "SPARK_LOCAL_IP=spark-submit"
     volumes:
-       - ./data/shinner/demo_graphs:/DemoGraphs
-       - ./data/shinner/config:/Config
-
+      - ./data/shinner/demo_graphs:/DemoGraphs
+      - ./data/shinner/config:/Config

@@ -2,37 +2,12 @@
 
 ## Overview ##
 
-WIP! 
+This repository conslidates common services needed for selected SmartDataLake component, mainly focusing on an Hadoop enabled Spark deployment, needed for deploying SciNeM and sHINNER using Docker.
 
-This repository conslidates common services needed for selected SmartDataLake component, mainly focusing on an Hadoop enabled Spark deployment. 
-
-
-```graphviz
-digraph finite_state_machine {
-    rankdir=TD;
-    
-    node [shape = sq ];
-
-    sdl_base [label="smartdatalake/docker-base"]
-
-    spark_shinner [label="sHINNER enabled Spark-Submit (TBD)" fillcolor="lightgray"]
-    spark_shinner_1 [label="sHINNER enabled Spark-Submit (Currently)"]
-
-    sdl_base -> spark_master;
-    sdl_base -> spark_worker;
-    sdl_base -> spark_submit;
-
-    sdl_base -> sdl_scinem_app;
-    
-    spark_submit -> spark_shinner;
-
-    jsatch -> spark_shinner_1;
-}
-```
 
 ## Preparation
 
-- Get this repository
+- Get this repository ```git clone https://github.com/smartdatalake/docker-deploy.git```
 - Build the SciNem stack according to this [link](https://github.com/smartdatalake/docker-scinem)
 - Build the Shinner according to this [link](https://github.com/smartdatalake/docker-shinner)
 
